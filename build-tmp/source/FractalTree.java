@@ -29,7 +29,7 @@ public void setup()
 {    
 	colorMode(HSB);
 	background(312, 135, 15);  
-	size(length, width);    
+	size(length, width);  
 } 
 public void draw() 
 {   
@@ -45,6 +45,10 @@ public void fractal()
 	s += (int)Math.random()*10-1;
 	b += (int)Math.random()*20-1;
 	to += (int)Math.random()*100-5;
+}
+public void mouseClicked()
+{
+	drawBranches(length/2, width/2, wingspan/2, angle);
 }
 public void drawBranches(int x,int y, double branchLength, double angle) 
 {   
